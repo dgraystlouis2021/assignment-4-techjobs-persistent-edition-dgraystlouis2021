@@ -13,8 +13,10 @@ public class Employer extends AbstractEntity {
     @NotBlank
     @Size(min=1,max=100,message = "Entered location cannot be greater than 100 characters")
     private String location;
+    
     // NEED TO RE-VISIT THESE ANNOTATIONS------------------------
     @OneToMany
+    //-----------------------------------------------------
     //@JoinColumn(name="job_id")
     //@JoinColumn
     //------------------------------------------------------------

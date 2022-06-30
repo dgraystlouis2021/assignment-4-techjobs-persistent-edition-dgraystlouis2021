@@ -32,6 +32,10 @@ public class HomeController {
     @RequestMapping("")
     public String index(Model model) {
         model.addAttribute("title", "My Jobs");
+        // ADDED BY DAG----------------------------
+        Iterable<Job> jobs=jobRepository.findAll();
+        model.addAttribute("jobs", jobs);
+        //----------------------------------------------
         return "index";
     }
 
@@ -59,6 +63,8 @@ public class HomeController {
             model.addAttribute("title", "Add Job");
             Iterable<Employer> employers = employerRepository.findAll();
             model.addAttribute("employers", employers);
+            // ADDED BY DAG------
+            model.addAttribute("skills", skillRepository.findAll());
             return "add";
         }
         // ADDED BY DAG------
