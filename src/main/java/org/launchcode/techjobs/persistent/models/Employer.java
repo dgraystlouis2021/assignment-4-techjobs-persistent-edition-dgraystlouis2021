@@ -17,8 +17,11 @@ public class Employer extends AbstractEntity {
     // NEED TO RE-VISIT THESE ANNOTATIONS------------------------
     @OneToMany
     //-----------------------------------------------------
-    //@JoinColumn(name="job_id")
+    // Place JOINCOLUMN on the one side of the one-to-many relationship with the name of employer_id
+    // A bidirectional association via a foreign key with a foreign column name specification
+    // Can also be placed in the Job class
     //@JoinColumn
+    @JoinColumn(name="employer_id")
     //------------------------------------------------------------
     private final List<Job> jobs=new ArrayList<>();
 

@@ -54,6 +54,7 @@ public class EmployerController {
         Iterable<Employer> employers;
         employers=employerRepository.findAll();
         model.addAttribute("employers",employers);
+        model.addAttribute("title", "All Employers");
         return "employers/index";
     }
 }

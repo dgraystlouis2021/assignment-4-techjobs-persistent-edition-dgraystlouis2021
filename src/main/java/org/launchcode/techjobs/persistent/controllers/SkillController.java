@@ -26,6 +26,7 @@ public class SkillController {
         Iterable<Skill> skills;
         skills=skillRepository.findAll();
         model.addAttribute("skills",skills);
+        model.addAttribute("title", "All Skills");
         return "skills/index";
     }
     // CONTROLLER ADDED BY DAG

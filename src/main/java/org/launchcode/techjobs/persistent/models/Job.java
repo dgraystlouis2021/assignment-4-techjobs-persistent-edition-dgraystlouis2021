@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 public class Job extends AbstractEntity{
+    // BIDIRECTIONAL RELATIONSHIP BETWEEN Job CLASS AND Employer CLASS
     @ManyToOne
     private Employer employer;
     //private String skills;
